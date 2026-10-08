@@ -21,11 +21,12 @@ initial begin
 {A,B,C} = 3'b110; #10;
 {A,B,C} = 3'b111; #10;
 
+$finish;
+
 end
 
 initial begin
 $monitor("Time=%0t| A=%b B=%b C=%b | sum=%b carry=%b",$time, A, B, C, sum, carry);
-#80; $finish;
 end
 
 endmodule
