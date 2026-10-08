@@ -10,23 +10,18 @@ halfadder uut (
 );
 
 initial begin 
-	A = 0;
-	B = 0;
-#10;
-	A = 0;
-	B = 1;
-#10;
-	A = 1;
-	B = 0;
-#10;
-	A = 1;
-	B = 1;
-#10;
-$finish;
+	{A,B} = 2'b00; #10;
+	{A,B} = 2'b01; #10;
+	{A,B} = 2'b10; #10;
+	{A,B} = 2'b11; #10;
+
 end
 
 initial begin
 $monitor("Time=%0t | A=%b B=%b | sum=%b carry=%b",$time, A, B, sum, carry);
+
+#40; $finish;
+
 end
 
 endmodule
