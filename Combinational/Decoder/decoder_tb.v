@@ -6,9 +6,9 @@ decoder uut (
 	.A(A),
 	.B(B),
 	.Y0(Y0),
-        .Y1(Y1),
-        .Y2(Y2),
-        .Y3(Y3)
+    .Y1(Y1),
+    .Y2(Y2),
+    .Y3(Y3)
 );
 
 initial begin 
