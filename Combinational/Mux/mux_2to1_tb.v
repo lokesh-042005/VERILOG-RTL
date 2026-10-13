@@ -16,8 +16,7 @@ initial begin
 
 	$monitor("time = %0t S=%b A=%b B=%b Y=%b",$time, S, A, B, Y);
 	for (i = 0; i < 8; i = i+1) begin
-		{S,A,B} = i[2:0];
-		#80;
+		{S,A,B} = i[2:0]; #10;
 	end
 	$finish;
 
